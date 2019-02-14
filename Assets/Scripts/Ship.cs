@@ -40,11 +40,19 @@ public class Ship : MonoBehaviour
 		{
 			transform.position = new Vector2(-10f, transform.position.y);
 		}
+		if (transform.position.y <= -5f)
+		{
+			transform.position = new Vector2(transform.position.x, -2.7f);
+		}
+		else if (transform.position.y >= 5f)
+		{
+			transform.position = new Vector2(transform.position.x, 2.7f);
+		}
     }
 
-	private void OnTriggerEnter2D(Collision col)
-	{
-		gameManager.increaseScore();
-		col.gameObject.SetActive(false);
-	}
+//	private void OnTriggerEnter2D(Collider col)
+//	{
+//		gameManager.increaseScore();
+//		col.gameObject.SetActive(false);
+//	}
 }
