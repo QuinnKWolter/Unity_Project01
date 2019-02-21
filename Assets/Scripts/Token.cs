@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class Token : MovingObject
 {
-    // Update is called once per frame
-    void FixedUpdate()
-    {
-		movement(speed);
-    }
+	public Sprite[] tokenSprites;
+
+	public void chooseSprite()
+	{
+		int i = Random.Range(0, tokenSprites.Length);
+		Debug.Log("Token: " + i);
+		GetComponent<SpriteRenderer>().sprite = tokenSprites[i];
+	}
 }

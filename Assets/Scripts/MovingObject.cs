@@ -5,22 +5,24 @@ using UnityEngine;
 public class MovingObject : MonoBehaviour
 {
 	public int speed;
-	protected Rigidbody2D rigidB;
+	public int rotationSpeed;
+	protected Rigidbody2D rb;
 
     // Start is called before the first frame update
     void Start()
     {
-		rigidB = GetComponent<Rigidbody2D>();
+		rb = GetComponent<Rigidbody2D>();
     }
 
-	public void movement(int speed)
+	void FixedUpdate()
 	{
-		rigidB.velocity = new Vector2(0f, -speed);
+		rb.velocity = new Vector2(0f, speed);
+		rb.AddTorque(rotationSpeed);
 	}
 
 	void OnTriggerExit2D(Collider2D other)
 	{
-		rigidB.angularVelocity = 0;
+		rb.angularVelocity = 0;
 		gameObject.SetActive(false);
 	}
 }

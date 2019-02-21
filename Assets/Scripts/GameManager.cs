@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
 	public static GameManager instance = null;
 	private Pooler obstaclePooler;
 	private Pooler tokenPooler;
-	private Pooler explosionPooler;
+	private Pooler cashPooler;
 	private static int score;
 
 	void Awake()
@@ -35,7 +35,6 @@ public class GameManager : MonoBehaviour
 	{
 		obstaclePooler = GameObject.Find("ObstaclePool").GetComponent<Pooler>();
 		tokenPooler = GameObject.Find("TokenPool").GetComponent<Pooler>();
-		explosionPooler = GameObject.Find("ExplosionPool").GetComponent<Pooler>();
 	}
 
 	public Pooler getObstaclePool()
@@ -48,9 +47,9 @@ public class GameManager : MonoBehaviour
 		return tokenPooler;
 	}
 
-	public Pooler getExplosionPool()
+	public Pooler getCashPool()
 	{
-		return explosionPooler;
+		return cashPooler;
 	}
 
 	public void increaseScore()

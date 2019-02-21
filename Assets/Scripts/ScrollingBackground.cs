@@ -39,11 +39,11 @@ public class ScrollingBackground : MonoBehaviour
 
 	// Reset piece above camera view
 	void resetPiece(GameObject piece) {
-		piece.transform.position = new Vector2(piece.transform.position.x, piece.transform.position.y - spriteHeight * 2);
+		piece.transform.position = new Vector3(piece.transform.position.x, piece.transform.position.y - spriteHeight * 2, 1f);
 	}
 
 	// Move the piece at a constant speed
 	void movePiece(GameObject piece) {
-		piece.transform.Translate(new Vector2(transform.up.y * (movementSpeed/100), 0f));
+		piece.transform.Translate(new Vector3(transform.up.y * (movementSpeed/100), 0f, 0f));
 	}
 }

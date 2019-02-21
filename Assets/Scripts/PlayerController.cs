@@ -52,6 +52,7 @@ public class PlayerController : MonoBehaviour
 	private void OnTriggerEnter2D(Collider2D col)
 	{
 		gameManager.increaseScore();
+		Debug.Log(col);
 		col.gameObject.SetActive(false);
 	}
 }

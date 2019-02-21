@@ -5,46 +5,43 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
 	public float lastSpawn = 0;
-	public GameManager gameManager;
 	private Pooler obstaclePool;
 	private Pooler tokenPool;
+	private Pooler cashPool;
 
 	void Awake()
 	{
-		if (GameManager.instance == null)
-			Instantiate(gameManager);
-
 		obstaclePool = GameManager.instance.getObstaclePool();
 		tokenPool = GameManager.instance.getTokenPool();
+		cashPool = GameManager.instance.getCashPool();
 	}
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-		objectSpawn();
+		objectRandomSpawn();
     }
 
-	void objectSpawn()
+	void objectRandomSpawn()
 	{
-		GameObject car = obstaclePool.getPooledObject();
-		GameObject coin = tokenPool.getPooledObject();
+		transform.position = new Vector2(Random.Range(-8, 8), transform.position.y);
+
+		GameObject obstacle = obstaclePool.getPooledObject();
+		GameObject token = tokenPool.getPooledObject();
 		if ((Time.fixedTime - lastSpawn) > 1.5f)
 		{
-			if (car != null && Random.Range(0, 100) < 20)
+			if (obstacle != null && Random.Range(0, 100) < 50)
 			{
-				car.transform.position = new Vector2(transform.position.x, transform.position.y);
-				car.SetActive(true);
+				obstacle.transform.position = new Vector2(transform.position.x, transform.position.y);
+				obstacle.SetActive(true);
+				obstacle.GetComponent<Obstacle>().chooseSprite();
 				lastSpawn = Time.fixedTime;
 			}
-			else if (coin != null && Random.Range(0, 100) < 20)
+			else if (token != null && Random.Range(0, 100) > 50)
 			{
-				coin.transform.position = new Vector2(transform.position.x, transform.position.y);
-				coin.SetActive(true);
+				token.transform.position = new Vector2(transform.position.x, transform.position.y);
+				token.SetActive(true);
+				token.GetComponent<Token>().chooseSprite();
 				lastSpawn = Time.fixedTime;
 			}
 		}
