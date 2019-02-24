@@ -1,5 +1,4 @@
-# Quinn Wolter
-# Unity_Project01
+# Quinn Wolter, Unity_Project01
 
 ## A Game About Falling
 
