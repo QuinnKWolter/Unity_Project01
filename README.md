@@ -13,10 +13,12 @@ Cash buys time, giving a decent amount of points and pushing back the zone while
 # Obstacles
 Objects that have served as harmful obstacles in the pursuit of wellbeing, both accelerating and drawing in the zone while directly harming the player on contact.
 
-To Win: Score 3000 points while avoiding death.
-To Lose: Lose all of your health to the zones and obstacles in the game.
+# To Win
+Score 3000 points while avoiding death.
+# To Lose
+Lose all of your health to the zones and obstacles in the game.
 
-What would I do differently?
+# What would I do differently?
 1. Fine tune the balance of the various pickups to a greater extent.  I like where they're at, but I could control the pace of the game better.
 2. Not get sick during development. Full-time work, evening classes, and a flu with a side of sinus infection has been just lovely in getting this done in a timely manner.
 3. Fine tune the movement mechanics - I had to sacrifice time here in favor of other features, and it shows. Still, I can claim floatiness factors in intentionally.
