@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Explosion : MonoBehaviour
+public class Sparkle : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -18,7 +18,7 @@ public class Explosion : MonoBehaviour
 
 	private IEnumerator handleAnimation()
 	{
-		yield return new WaitForSeconds(0.5f);
+		yield return new WaitForSeconds(1.3f);
 		gameObject.SetActive(false);
 	}
 }

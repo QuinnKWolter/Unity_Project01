@@ -9,7 +9,6 @@ public class Obstacle : MovingObject
 	public void chooseSprite()
 	{
 		int i = Random.Range(0, obstacleSprites.Length);
-		Debug.Log("Obstacle: " + i);
 		GetComponent<SpriteRenderer>().sprite = obstacleSprites[i];
 	}
 }

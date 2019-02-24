@@ -9,7 +9,6 @@ public class Token : MovingObject
 	public void chooseSprite()
 	{
 		int i = Random.Range(0, tokenSprites.Length);
-		Debug.Log("Token: " + i);
 		GetComponent<SpriteRenderer>().sprite = tokenSprites[i];
 	}
 }

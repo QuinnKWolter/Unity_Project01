@@ -18,11 +18,11 @@ public class MovingObject : MonoBehaviour
 	{
 		rb.velocity = new Vector2(0f, speed);
 		rb.AddTorque(rotationSpeed);
-	}
 
-	void OnTriggerExit2D(Collider2D other)
-	{
-		rb.angularVelocity = 0;
-		gameObject.SetActive(false);
+		if (transform.position.y > 10)
+		{
+			rb.angularVelocity = 0;
+			gameObject.SetActive(false);
+		}
 	}
 }

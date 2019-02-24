@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 9157195252957886375}
   m_Layer: 0
   m_Name: Cash
-  m_TagString: Pickup
+  m_TagString: Cash
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e12db549b28518141b6d8a4d4b5b30f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
+  speed: 3
   rotationSpeed: 0
   cashSprites:
   - {fileID: 21300000, guid: bebafa6ca5d707540bfbc1c72246f053, type: 3}

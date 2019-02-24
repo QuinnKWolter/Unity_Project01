@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Pickup
+  - Token
+  - Obstacle
+  - Cash
+  - Cloud
+  - HurtPlane
   layers:
   - Default
   - TransparentFX

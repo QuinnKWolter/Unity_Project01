@@ -4,15 +4,11 @@ using UnityEngine;
 
 public class CloudNear : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+	public Sprite[] cloudNearSprites;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+	public void chooseSprite()
+	{
+		int i = Random.Range(0, cloudNearSprites.Length);
+		GetComponent<SpriteRenderer>().sprite = cloudNearSprites[i];
+	}
 }

@@ -10,11 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 7981402107487371172}
   - component: {fileID: 5851993092038745052}
+  - component: {fileID: 1220340443134408713}
   - component: {fileID: 3793523041423163316}
   - component: {fileID: 1240784233701659631}
   m_Layer: 0
   m_Name: CloudNear
-  m_TagString: Untagged
+  m_TagString: Cloud
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27,8 +28,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2950251719668817739}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: -2, z: -1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -45,7 +46,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e253494d1e7acd428743b7c252fb3e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 7
+  rotationSpeed: 0
+--- !u!114 &1220340443134408713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2950251719668817739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a2fcb878b1f6bf46a1afbd70947f70c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cloudNearSprites:
+  - {fileID: 21300000, guid: a0f533d01e34ff444a51e648acf51cc5, type: 3}
+  - {fileID: 21300000, guid: 8b79a65ce1098e841a7f8541bb16d315, type: 3}
+  - {fileID: 21300000, guid: 48f241b7cd0729d46a27bab37c3733ec, type: 3}
+  - {fileID: 21300000, guid: 7093240ddf088c34ebc46b22d38cf1db, type: 3}
+  - {fileID: 21300000, guid: fa48e1c685968d648ba080b818a43df9, type: 3}
+  - {fileID: 21300000, guid: a887212896151054e921d3eb61189ba7, type: 3}
 --- !u!212 &3793523041423163316
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -83,15 +104,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 3f120e1781b63a543bb259b1e4e150aa, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: a0f533d01e34ff444a51e648acf51cc5, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.6666667}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.61, y: 0.75}
+  m_Size: {x: 11.71, y: 5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!50 &1240784233701659631
